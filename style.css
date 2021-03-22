@@ -1,0 +1,492 @@
+/* body{
+ 	background-color: #000
+ }*/
+html{
+	background-color: #f9f8da;
+}
+ 
+ /*обнулим отступы*/ /*разные браузеры имеют различные отступы по умолчанию*/ 
+ *{ /*звёздочка значит выбраны все элементы*/
+    padding: 0; /*внутрений отступ*/
+    margin: 0; /*внешний*/
+    font-family: 'Roboto Condensed', sans-serif; /*шрифт*/
+}
+body, html{
+	overflow-x: hidden; /*отображение блочного элемента по горизонтали*/
+}
+nav{
+	margin: 0 auto; /*для того чтобы центрировать*/
+	max-width: 1100px; /*максимальная ширина*/
+	width: 100%; /*ширина*/
+}
+/*убираем checkbox-menu пока нам не нужен, до определённого момента*/
+#checkbox-menu,
+.toggle{
+	display: none;
+}
+/*стилизуем блок с классом меню*//*одна точа указывает что это класс*/
+.menu{
+	padding: 0;
+	margin: 0;
+	height: 50px; /*высота*/
+	display: flex; /*наиболеее точное распределениия места между элементами*/
+	flex-direction: row; /*направление главной оси, и определяем направления элемента row, то есть стандартно положение с лево на право*/
+    justify-content: space-around; /*justify-content выравнивание вдоль главной оси space-around элементы распределены с равным местом вокруг них*/
+    align-items: center; /*выравнивает flex-элементы текущей flex-линии таким же образом, как и justify-content, но в перпендикулярном направлении.*/
+    list-style-type: none;/* для того чтобы убрать маркеры для каждого элемента списка*/
+}
+/*стилизация ссылок*/
+.menu li a{
+	color: #000;
+	text-decoration: none;
+	align-self: /*для выранивания элементов по текущей флекс линии*/
+    font-size: 13px; /*Определяет размер шрифта элемента.*/
+    padding: 10px 10px;
+    transition: background .2s linear; /*Устанавливает эффект перехода между двумя состояниями элемента*/
+}
+.menu li a:hover{/*hover определения стиля элемента при наведении на него курсора мыши*/
+	background: #ffcc01;
+	border-radius: 3px;
+}
+/*стилизуем блок с классом лого*/
+.menu li a.logo{
+	font-size: 25px;
+	margin-right: 240px;
+}
+.menu li a.contacts{
+	margin-right: 100px; /*Устанавливает величину отступа от правого края элемента*/
+}
+/*медиа запрос позволяет адаптировать страницу для различных типов устройств
+многие медиа выражения представляют с собой функцию диапазона и имеют
+префиксы min max*/
+/*в нашем случае данный css код будет применятся только если ширина 
+экрана меньши либо равна 765 px*/
+/*УРОК ВТОРОЙ*/
+.wrapper{ /*как и блок nav 14-17 строки, подстраиваем под него*/
+	margin: 0 auto;
+	max-width: 1100px; /*максимальная ширина*/
+	width: 100%;
+}
+.intro{
+	margin-top: 25px;
+	display: flex;
+	justify-content: flex-end; 
+}
+.intro-img{
+	background-image: url(img/room.jpeg);
+	width: 965px;
+	height: 640px;
+	/*object-fit: cover;
+   object-position: center;*/
+}
+.intro .intro-text{
+	position: absolute;
+	font-size: 62px;
+	right: 710px;
+	top: 100px;
+}
+.intro-contacts{
+	background-color: #ffcc01;
+	max-width: 590px;
+	position: absolute;
+	right: 170px;
+	top: 638px;
+	display: flex; /*чтобы расположились рядом*/
+	justify-content: space-between;
+	padding: 30px 50px;
+}
+/*стилизуем иконки*/
+.intro-contacts i{
+	color: #fff;
+	margin-right: 30px; /*чтобы сдвинулись в право*/
+}
+.intro-contacts p{
+	font-size: 18px;
+	margin-right: 60px;
+}
+/*Решение на Flexbox*/
+.stats{
+	display: flex; /*display определяет, как элемент должен быть показан в документе*/
+	margin-top: 130px;
+}
+.stats-line{
+	display: flex; /*квадраты станут на свои места*/
+}
+.stats-text{
+	padding: 40px;
+}
+.stats-text h2{
+	font-size: 40px;
+	margin-bottom: 70px; /*между h2 и p*/
+}	
+.stats-text p{
+	margin-top: 50px;
+	font-size: 13px;
+	line-height: 27px; /*высота строки*/
+}
+.square{
+	width: 200px;
+	height: 200px;
+	background-color: #f6f5f4;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center; /*Задает выравнивание содержимого колонок, в нашем примере по центру*/
+	flex-direction: column; /*расположение текста в колонку*/
+}
+.stats-square{
+	font-size: 40px;
+	color: #ffcc01;
+	margin-bottom: 15px; /*растояние от числа до текста*/
+}
+.square-text{
+	font-size: 14px;
+}
+.apartments{
+	background: #f5f6f4;
+	padding: 60px 0; /*ноль-сверху снизу*/
+}
+.apart h2{
+	margin-bottom: 85px; /*от изображения до заголовка*/
+	font-style: 40px;
+}
+.card{
+	max-width: 378px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.card-container{
+	padding: 25px;
+}
+.card-info{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+}
+.money{
+	font-size: 18px;
+	color: #ffcc01;
+}
+.card-info i{
+	margin-right: 8px;
+}
+.card-info span:first-child{ /*применяет стилевое оформление к первому дочернему элементу своего родителя 1 первый элемент отдаляется от второго*/
+	margin-right: 18px;
+}
+.card:hover{ /*Определяет стиль элемента при наведении на него курсора мыши*/
+	background: #fafaf9;
+	box-shadow: 0 0 10px rgba(0,0,0,10);	
+}
+/*стилизация катрочек с использованием css grid*/
+/*методом сетки*/
+.cards{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /*выстраивает нам колонки*/
+	grid-template-rows: repeat(2, 1fr); /*выстраивание строк 2 строки. 1fr единица гибкости ширина каждого элемента будет равномерно распределена
+	репит применяет к каждому*//* в итоге у нас две колонки и три строки*/
+	grid-column-gap: 20px; /*отступы между <-> блоками*/
+	grid-row-gap: 20px; /*отступы между блоками сверху посередине*/
+}
+.apart input[type=text]{
+	margin-top: 50px;
+	width: 300px;
+	height: 40px;
+	border: none;
+	font-size: 15px;
+	color: #0c4755;
+	padding-left: 10px;
+	background-color: #cfe7ed;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.apart input[type=submit]{
+	width: 115px;
+	border: none;
+	height: 40px;
+	background: #ffcc01;
+	font-size: 15px;
+	margin-left: -4px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.all{
+	width: 250px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	margin-left: 40px;
+	margin-top: 52px;
+	font-style: 15px;
+	background: #cfe7ed;
+}
+.buttons-search{
+	display: flex;
+}
+.steps h2{
+	margin-top: 55px;
+	font-style: 40px;
+	margin-bottom: 35px;
+}
+.steps-text {
+	line-height: 27px;
+	font-style: 13px;
+}
+.mbtext {
+	margin-bottom: 70px; /*отодвигаем карточку от верхнего текста*/
+}
+.stepblock {
+	width: 340px;
+	height: 370px;
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	overflow: hidden; /*обрезать всё что выходит за данный блок*/
+
+}
+.stepblock .step-num {
+	font-size: 200px;
+	position: relative;
+	top: -100px;
+	left: -30px;
+}
+.stepblock:hover {
+	background: #ffcc01; /*когда наводим меняет звет*/
+	color: #fff; /*с чёрного в белый*/
+}
+.steps-container {
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between; /*чтобы блоки расположились с равнм отступом*/
+}
+.stepblock h4 {
+	font-size: 14px;
+	margin-left: 40px;
+	margin-top: -100px; /*чтобы сдвинуть вверх*/
+	margin-bottom: 20px;
+}
+.stepblock h4 span {
+	margin-right: 15px;
+}
+.step-info {
+	margin-left: 70px;
+	line-height: 29px;
+	margin-right: 5px;
+}
+.stepinfolast {
+	display: inline-block;
+	margin-left: 70px;
+	margin-top: 20px;
+	border-bottom: 3px solid #000; 
+}
+.stepblock:hover .stepinfolast {
+	border-color: #fff;
+}
+footer {
+	background: #1f373d;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+.footer-block {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-block h3 {
+	font-size: 40px;
+}
+.footer-search input[type=text]{
+	width: 200px;
+	height: 50px;
+	color: #919eb1;
+	padding-left: 25px;
+	font-size: 15px;
+}
+hr {
+	opacity: 0.3;
+	margin-top: 45px;
+	margin-bottom: 70px;
+}
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 90px;
+}
+.footer-link {
+	display: flex;
+	flex-direction: column;
+}
+.footer-links-logo {
+	font-size: 25px;
+	margin-right: 5px;
+}
+.footer-link p{
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #919eb1; /*как и ряд 299 footer-search input[type=text]*/
+	margin-bottom: 35px;
+}
+.footer-link a {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+.footer-link a:hover {
+	opacity: 0.4;
+}
+@media screen and (max-width: 765px) {
+	.toggle{
+		clear: both;
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		/*шрифт иконки*/
+		line-height: 40px;
+		width: 100%;
+		color: #000;
+		background: #ffcc01;
+		transition: all .1s linear;
+  }
+ 	.toggle:hover{
+ 		background: #d3a900;
+ 	}/*кнопка никак не реагирует воспользуемся css свойствами*/
+ 	/*идентификатор checkbox-menu с значением checked */
+ 	#checkbox-menu:checked + label .touch li{
+ 		opacity: 1;
+ 		visibility: visible;
+ 		transition: all .7s linear;
+ 	} /*добавляем для класса touch высоту нашего элемента*/
+ 	#checkbox-menu:checked + label .touch{
+ 		height: 350px;
+	}/*стилизуем меню которое будет открыватся*/
+	.menu{
+		display: flex;
+		flex-direction: column; /*чтобы всё было в колонке*/
+		justify-content: space-around;
+		align-items: center;
+		height: 0;
+		transition: height .3s linear;
+	}/*стилизуем элементы нашего меню*/
+	.menu li{
+		display: flex;
+		align-self: center;
+		width: 95%;
+		opacity: 0;
+		visibility: hidden;
+	} /*цинтрируем меню*/
+	.menu li a{
+		width: 95%;
+		text-align: center;
+		align-self: center;
+		align-content: center;
+	}/* исправляем недочёты*/
+	.menu li a.logo{
+	font-size: 21px;
+	margin-right: 0px;
+}
+.menu li a.contacts{
+	margin-right: 0px; 
+}
+.intro{
+	margin-top: 0;
+	display: block;
+	max-width: 100%;
+}
+.intro{
+	margin-top: 0;
+	display: block;
+	max-width: 100%;
+ }
+.intro-img{
+	background-position: bottom 50px right 570px; /*делаем под себя как нам нужно*/
+}
+.intro .intro-text{
+	position: relative; /*текст будет оставатся на месте*/
+	font-size: 35px;
+	right: -10px;
+	top: 300px;
+}
+.intro .intro-contacts{
+	right: 0; /*чтобы блок расположился с право*/
+	top: -60px;
+	padding: 20px 10px;
+	position: relative;
+}
+.intro-contacts p{
+	font-size: 13px;
+	margin-right: 0;
+}
+.stats{
+	margin-top: 0;
+	flex-direction: column;
+}
+.stats-text{
+	padding: 10;
+}
+.stats-text h2{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.stats-text p{
+	margin-top: 5px;
+	font-size: 13px;
+	line-height: 18px;
+}
+.square{
+	height: 140px; /*здесь можно изменить шрифт*/
+}
+.cards{
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-row-gap: 10px;
+	justify-items: center; 
+
+		 
+}
+.apart input[type=text]{
+	margin-top: 20px;
+	width: 130px;
+}
+.button-search{
+	flex-direction: column;
+	margin-left: 4%;
+}
+.all{
+	background: #fff;
+	margin-top: 10px;
+	margin-left: 0;
+
+}
+.steps-container {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.stepblock {
+	margin-top: 20px;
+}
+.steps-text, .steps h2 {
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+.footer-block {
+	flex-direction: column;
+}
+.footer-logo h3 {
+	font-size: 25px;
+	text-align: center;
+}
+.footer-search input[type=text] {
+	width: 300px;
+	height: 50px;
+}
+.footer-search {
+	display: flex;
+	justify-content: center;
+}
+.footer-links {
+	flex-wrap: wrap; /*блоки переместятся по следующей линии автоматически*/
+	margin-left: 5px;
+	padding-right: 5px;
+}
+}
+

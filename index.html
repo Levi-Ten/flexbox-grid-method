@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8c5f8983b2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body> 
+	<header>
+		<nav>
+		<input type="checkbox" id="checkbox-menu">
+		<label for="checkbox-menu">
+		<ul class="menu touch">
+		<li><a class="logo" href="#">luxestate</a></li><!-- логотип -->
+		<li><a href="page2.html">about</a></li>
+		<li><a href="#">apartment</a></li>
+		<li><a href="#">how it work</a></li>
+		<li><a href="#">agents</a></li>
+		<li><a class="contacts" href="#">contacts us</a></li>
+		<li><a href="#">join us</a></li>
+		<li><a href="#">getting started</a></li>
+		</ul>
+		<span class="toggle">☰</span> <!-- далее переходим в css чтобы стилизовать -->
+		</label>
+	</nav>
+	</header>
+	<main> <!-- элемеент предназначен для основного содержимого страницы, не должно быть больше одного элемента main -->
+		<section class="intro wrapper"> <!-- универсальный раздел документа --> <!-- class="intro wrapper" - Обёртка требуется, если одна подсистема требует реализации определённого интерфейса, а другая подсистема, в которой реализована нужная функциональность, не реализует этот интерфейс. -->
+
+			<div class="intro-img">
+				<p class="intro-text">Find Your New <br> Modern Apartment</p>
+				</div>
+				<div class="intro-contacts">
+					<p><i class="fas fa-phone-alt"></i></i>(000)123-456</p> <!-- подключаем font awesome -->
+					<p><i class="fas fa-map-marker-alt"></i>Melburn, Australia</p>
+					<!-- ДАЛЕЕ ПЕРЕХОДИМ В CSS И СТИЛИЗУЕМ БЛОК -->
+				</div>
+		</section>
+		<section class="stats wrapper"> <!-- section Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок. Допускается вкладывать один тег <section> внутрь другого. -->
+			<div class="stats-text"> <!-- блок для текста -->
+				<h2>Our's Company<br>Statistics</h2>
+				<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. 
+				Vero minima earum deserunt asperiores modi inventore ipsa ab ex doloribus. 
+			    Facere suscipit quos perferendis ullam nesciunt, voluptatem deserunt expedita illum accusamus, et nihil.</p>
+			    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo illum maxime veritatis blanditiis voluptatum, qui dolorem quod, hic omnis deleniti unde, temporibus aut quae a? Accusamus nisi facere provident corrupti, cum.</p>
+			</div>
+			<div class="stats-num"> <!-- блок для чисел -->
+				<div class="stats-line">
+					<div class="square"> <!-- square квадрат  -->
+					<span class="stats-square">7231</span> <!-- Тег <span> предназначен для определения строчных элементов документа. В отличие от блочных элементов, таких как <table>, <p> или <div>, с помощью тега <span> можно выделить часть информации внутри других тегов и установить для нее свой стиль -->
+					<span class="square-text">Appartments</span>
+					</div>
+					<div class="square">
+					<span class="stats-square">7231</span>
+					<span class="square-text">Appartments</span>
+				</div>
+			    </div>
+					
+					<div class="stats-line">
+					<div class="square">
+					<span class="stats-square">7231</span>
+					<span class="square-text">Appartments</span>
+				</div>
+				<div class="square">
+					<span class="stats-square">7231</span>
+					<span class="square-text">Appartments</span>
+				</div>
+			   </div>
+		   </div> <!-- для стилизации переходим перед медиа запрос -->
+		</section>
+		<section class="apartments">
+			<div class="wrapper apart">
+				<h2>More than 500<br>Apartments For Rent</h2>
+					<div class="cards">
+						<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+							<div class="card">
+							<img src="img/apart.jpeg" alt="">
+							<div class="card-container"> <!-- внутри которого будет текст цена и две иконки -->
+								<p>Lorem ipsum dolor sit amet, consectetur.</p>
+								<div class="card-info">
+									<div class="money">$3,500</div>
+									<div class="info">
+										<span><i class="fas fa-shower"></i>2BA</span>
+										<span><i class="fas fa-bed"></i>2BD</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="buttons-search">
+						<form action="">
+							<!-- <i class="fas fa-search-location"></i> -->
+							<input type="text" placeholder="Search Location"> 
+							 
+							<!-- placeholder Выводит текст внутри поля формы, который исчезает когда начинаем печатать запрос -->
+							<input type="submit" value="Search">
+						</form>
+						<button class="all">View All Apartments</button>
+
+					</div>
+
+			</div>
+			
+		</section>
+		<section class="steps">
+			<div class="wrapper"> <!-- центрирует элементы -->
+			<h2>How It Work</h2>
+			<p class="steps-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> <!-- 8 слов -->
+			<p class="steps-text mbtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Nulla, omnis, dolor!</p> <!-- 11 слов -->
+			<div class="steps-container"> <!-- основной блок -->
+		   <div class="stepblock"><!--  второстепенные блоки, те что внутри основного блока, ид нужен для js -->
+			<p class="step-num">01</p> <!-- цифра из блока -->
+			 <h4><span>01</span>Find Your Location</h4> <!-- span нужен для того чтобы отдельно стилизовать 01 от h4 -->
+				<p class="step-info">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Numquam voluptatum natus reiciendis quibusdam quasi.</p> <!-- 14 слов -->
+			  <p class="stepinfolast">Find Location</p> <!-- переходим в css -->
+		  </div>
+			<div class="stepblock"><!--  второстепенные блоки, те что внутри основного блока, ид нужен для js -->
+			  <p class="step-num">02</p> <!-- цифра из блока -->
+				<h4><span>01</span>Find Your Location</h4> <!-- span нужен для того чтобы отдельно стилизовать 01 от h4 -->
+				<p class="step-info">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Numquam voluptatum natus reiciendis quibusdam quasi.</p> <!-- 14 слов -->
+				<p class="stepinfolast">Find Location</p> <!-- переходим в css -->
+			 </div>
+				<div class="stepblock"><!--  второстепенные блоки, те что внутри основного блока, ид нужен для js -->
+				<p class="step-num">03</p> <!-- цифра из блока -->
+				<h4><span>01</span>Find Your Location</h4> <!-- span нужен для того чтобы отдельно стилизовать 01 от h4 -->
+				<p class="step-info">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Numquam voluptatum natus reiciendis quibusdam quasi.</p> <!-- 14 слов -->
+				<p class="stepinfolast">Find Location</p> <!-- переходим в css -->
+				</div>
+			</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="wrapper">	
+          <div class="footer-block">	
+          		<div class="footer-logo">	
+          				<h3>luxestate</h3>
+          				<h3>Explore Real Estate</h3>
+          		</div>
+          		<div class="footer-search">
+          			<input type="text" placeholder="Subscribe To Our Newsletter">
+          		</div>	
+          </div>
+          <hr>
+          <div class="footer-links">
+          	<div class="footer-links-logo">
+          		<h4>luxestate</h4>
+          	</div>
+          		<div class="footer-link">
+          			<p>luxestate</p>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          		</div>
+          		<div class="footer-link">
+          			<p>luxestate</p>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          		</div>
+          		<div class="footer-link">
+          			<p>luxestate</p>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          			<a href="#">Agents</a>
+          		</div>
+          		<div class="footer-link">
+          			<p>luxestate</p>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          			<a href="#">Agents</a>
+          			<a href="#">Hunters</a>
+          		</div>
+          	</div>
+		 </div>		
+	</footer>
+</body>
+</html>
+
